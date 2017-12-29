@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Netflix Message",
+  "version": "1.0",
+  "description": "Replaces the name of what you're watching with a custom message. Intended to be a subtle hint to friends, family, roommates, etc.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.netflix.com/watch/*"],
+      "js": ["msg.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html"
+  }
+}
